@@ -69,5 +69,3 @@ Max GPIO number is unknown so far; the GPIOs differ from other HTC qsd8k devices
 - 32: Flashlight
 - 100: Vibration
 - 101 or 102: Seems to be panel backlight enable.
-
-[Here](example.com) is a picture of the internals of HTC HD7.
