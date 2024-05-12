@@ -5,16 +5,43 @@
 The ROMHDR located in NK.bin of WP7 for HD7, with values in little-endian format:
 
 ```hex
-8E EF 01 40 // dllfirst
-00 F0 03 40 // dlllast
-00 00 50 80 // physfirst
-88 96 96 80 // physlast
-4B 00 00 00 // nummods (no TOC entry after ROMHDR)
-00 A0 96 80 // ulRAMStart
-00 F0 9A 80 // ulRAMFree
-00 00 A0 87 // ulRAMEnd
-04 00 00 00 // ulCopyEntries
-B8 9F 59 80 // ulCopyOffset
+8E EF 01 40
+00 F0 03 40
+00 00 50 80
+88 96 96 80
+4B 00 00 00
+00 A0 96 80
+00 F0 9A 80
+00 00 A0 87
+04 00 00 00
+B8 9F 59 80
+00 00 00 00
+00 00 00 00
+26 00 00 00
+02 00 00 00
+04 00 00 00
+00 00 00 00
+00 00 00 00
+C2 01
+02 00
+20 10 50 80
+00 00 00 00
+00 00 00 00
+```
+
+converted to big endian to be readable hex values, also applied the comments from hd2's CRT0.s to know which value is which in romhdr
+
+```hex
+40 01 EF 8E // dllfirst
+40 03 F0 00 // dlllast
+80 50 00 00 // physfirst
+80 96 96 88 // physlast
+00 00 00 4B // nummods (no TOCentry after ROMHDR)
+80 96 A0 00 // ulRAMStart
+80 9A F0 00 // ulRAMFree
+87 A0 00 00 // ulRAMEnd
+00 00 00 04 // ulCopyEntries
+80 59 9F B8 // ulCopyOffset
 00 00 00 00 // ulProfileLen
 00 00 00 00 // ulProfileOffset
 00 00 00 00 // numfiles
@@ -22,11 +49,10 @@ B8 9F 59 80 // ulCopyOffset
 80 80 80 80 // ulFSRamPercent
 00 00 00 00 // ulDrivglobStart
 00 00 00 00 // ulDrivglobLen
-C2 01       // usCPUType
-02 00       // usMiscFlags
-20 10 50 80 // pExtensions
+C2 01 // usCPUType
+00 02 // usMiscFlags
+80 50 10 20 // pExtensions
 00 00 00 00 // ulTrackingStart
-00 00 00 00 // ulTrackingLen
 ```
 
 ## Framebuffer
@@ -43,5 +69,3 @@ Max GPIO number is unknown so far; the GPIOs differ from other HTC qsd8k devices
 - 32: Flashlight
 - 100: Vibration
 - 101 or 102: Seems to be panel backlight enable.
-
-[Here](example.com) is a picture of the internals of HTC HD7.
