@@ -1,0 +1,16 @@
+[BLKLen]
+10000
+[SignLen]
+80
+[Dev]
+PD2910000
+[Item]
+400,os.nb
+[Ver]
+1.61.207.01
+[Lang]
+WWE
+[CID]
+O2___102
+11111111
+HTC__102
