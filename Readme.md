@@ -67,5 +67,6 @@ Max GPIO number is unknown so far; the GPIOs differ from other HTC qsd8k devices
 
 - 29: Some display thing; after it's disabled, the screen turns blank.
 - 32: Flashlight
+- 90: Camera button, its configured as pulldown so if button is pressed GPIO is LOW
 - 100: Vibration
 - 101 or 102: Seems to be panel backlight enable.
