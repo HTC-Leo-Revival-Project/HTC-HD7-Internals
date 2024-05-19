@@ -61,7 +61,7 @@ Framebuffer location can be read from MDP fb reg, which is the same across all q
 
 ## GPIO Layout
 
-Max GPIO number is unknown so far; the GPIOs differ from other HTC qsd8k devices.
+Max GPIO number is 164; the GPIOs differ from other HTC qsd8k devices.
 
 ### GPIO List
 
