@@ -29,7 +29,7 @@ C2 01
 00 00 00 00
 ```
 
-converted to big endian to be readable hex values, also applied the comments from hd2's CRT0.s to know which value is which in romhdr
+Converted to big endian to be readable hex values, also applied the comments from HD2's CRT0.s to know which value is which in romhdr
 
 ```hex
 40 01 EF 8E // dllfirst
@@ -57,7 +57,7 @@ C2 01 // usCPUType
 
 ## Framebuffer
 
-Framebuffer location can be read from MDP fb reg, which is the same across all qsd8k devices. For HTC HD7, the Framebuffer is at `0x2e744000`.
+Framebuffer location can be read from MDP FB reg, which is the same across all QSD8k devices. For HTC HD7, the Framebuffer is at `0x2e744000`.
 
 ## GPIO Layout
 
@@ -65,8 +65,16 @@ Max GPIO number is 164; the GPIOs differ from other HTC qsd8k devices.
 
 ### GPIO List
 
-- 29: Some display thing; after it's disabled, the screen turns blank.
+- 29: Some display thing; after it's disabled, the screen turns blank. This GPIO could be LCD_RSTz, as shown in the [HTC Desire board support header file](https://github.com/snq-/bravo-kernel/blob/2.6.32-froyo/arch/arm/mach-msm/board-bravo.h#L143).
 - 32: Flashlight
 - 90: Camera button, its configured as pulldown so if button is pressed GPIO is LOW
 - 100: Vibration
 - 101 or 102: Seems to be panel backlight enable.
+
+## Board View
+
+The board seems to be almost identical, if not identical to other HTC QSD8k devices.
+
+| Top View                             | Bottom View                          |
+| ------------------------------------ | ------------------------------------ |
+| <img src="https://github.com/halal-beef/HTC-HD7-Internals/blob/main/20240521_085601.jpg" width="350">                                  | <img src="https://github.com/halal-beef/HTC-HD7-Internals/blob/main/20240521_085544.jpg" width="350">                  |
