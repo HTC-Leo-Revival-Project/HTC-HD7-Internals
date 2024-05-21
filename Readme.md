@@ -70,3 +70,11 @@ Max GPIO number is 164; the GPIOs differ from other HTC qsd8k devices.
 - 90: Camera button, its configured as pulldown so if button is pressed GPIO is LOW
 - 100: Vibration
 - 101 or 102: Seems to be panel backlight enable.
+
+## Board View
+
+The board seems to be almost identical, if not identical to other HTC QSD8k devices.
+
+| Top View                             | Bottom View                          |
+| ------------------------------------ | ------------------------------------ |
+| <img src="https://github.com/halal-beef/HTC-HD7-Internals/blob/main/20240521_085601.jpg" width="350">                                  | <img src="https://github.com/halal-beef/HTC-HD7-Internals/blob/main/20240521_085544.jpg" width="350">                  |
