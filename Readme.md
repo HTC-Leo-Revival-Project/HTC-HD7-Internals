@@ -29,7 +29,7 @@ C2 01
 00 00 00 00
 ```
 
-converted to big endian to be readable hex values, also applied the comments from hd2's CRT0.s to know which value is which in romhdr
+Converted to big endian to be readable hex values, also applied the comments from HD2's CRT0.s to know which value is which in romhdr
 
 ```hex
 40 01 EF 8E // dllfirst
@@ -57,7 +57,7 @@ C2 01 // usCPUType
 
 ## Framebuffer
 
-Framebuffer location can be read from MDP fb reg, which is the same across all qsd8k devices. For HTC HD7, the Framebuffer is at `0x2e744000`.
+Framebuffer location can be read from MDP FB reg, which is the same across all QSD8k devices. For HTC HD7, the Framebuffer is at `0x2e744000`.
 
 ## GPIO Layout
 
