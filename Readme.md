@@ -67,7 +67,10 @@ Max GPIO number is 164; the GPIOs differ from other HTC qsd8k devices.
 
 - 29: Some display thing; after it's disabled, the screen turns blank. This GPIO could be LCD_RSTz, as shown in the [HTC Desire board support header file](https://github.com/snq-/bravo-kernel/blob/2.6.32-froyo/arch/arm/mach-msm/board-bravo.h#L143).
 - 32: Flashlight
+- 41: Volumedown button, its configured as pulldown so if button is pressed GPIO is LOW
+- 41: Power button, its configured as pulldown so if button is pressed GPIO is LOW
 - 90: Camera button, its configured as pulldown so if button is pressed GPIO is LOW
+- 94: Volumeup button, its configured as pulldown so if button is pressed GPIO is LOW
 - 100: Vibration
 - 101 or 102: Seems to be panel backlight enable.
 
